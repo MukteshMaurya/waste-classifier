@@ -1,0 +1,20 @@
+# AI Waste Classifier - backend runtime dependencies.
+#
+# Deliberately excludes PyTorch: inference runs through onnxruntime, which is
+# ~10x smaller and starts faster on Render's free CPU tier.
+# Pinned for reproducible builds.
+
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+python-multipart==0.0.17
+pydantic==2.10.3
+pydantic-settings==2.7.0
+python-dotenv==1.0.1
+
+pillow==11.0.0
+numpy==1.26.4
+onnxruntime==1.19.2
+
+# Test-only (excluded from the Docker image via requirements-prod.txt)
+pytest==8.3.4
+httpx==0.28.0

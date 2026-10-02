@@ -1,0 +1,83 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# ---------------------------------------------------------------------------
+# Node / frontend
+# ---------------------------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Secrets / local configuration
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Datasets (never commit raw data)
+# ---------------------------------------------------------------------------
+data/
+data_raw/
+datasets/
+*.zip
+
+# ---------------------------------------------------------------------------
+# Training artifacts
+# ---------------------------------------------------------------------------
+artifacts/checkpoints/
+artifacts/runs/
+*.pth
+*.pt
+*.ckpt
+
+# NOTE: ONNX weights are intentionally NOT ignored.
+# See README "Model versioning" - the deployed model is a real, trained,
+# 10 MB artefact that must be present in the repository for Render to boot.
+# Large future model versions should move to Git LFS (see README).
+
+# ---------------------------------------------------------------------------
+# Logs / OS
+# ---------------------------------------------------------------------------
+*.log
+logs/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Editors
+# ---------------------------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
